@@ -1,9 +1,14 @@
 # Capstone Required Error Messages
 ![if-inputs-are-required-quote](https://user-images.githubusercontent.com/89945390/172217607-f8c2f8d0-6a86-40e9-9c64-5f4d737d8d60.jpg)
+#### Quick note on the above point:
+- Conveying meaning with color alone is *not* intuitive, especially for those with disabilites. Please check out this section of the W3 article [Designing for Web Accessibility](https://www.w3.org/WAI/tips/designing/#dont-use-color-alone-to-convey-information) to see more information on this! Especially important for letting users know what is required.  
 
-Keep in mind, there needs to be a *specific* error message that is displayed for the user for *EVERY* single validation. If a user can't submit something and nothing happens, you must tell them **why**!
+## How to use this Guide:
 
-Some of these don’t apply to every situation, if they do apply they are required, but those marked with an asterisk (*) are *always* required!
+Below we have common input fields and different datatypes and questions relating to each that represent a validation you will possibly need. Keep in mind, there needs to be a *specific* error message that is displayed for the user for *EVERY* single validation. If a user can't submit something and nothing happens, you must tell them **why**!
+
+**DISCLAIMER:** This isn't a comprehensive list, please consider any other error messages for your specific forms/database needs! 
+Some of these don’t apply to every situation, if they do apply, they are required, but those marked with an asterisk (*) are *always* required!
 
 *^ which this is a good example of making it obvious what is required!*
 
