@@ -70,3 +70,7 @@ Some of these don’t apply to every situation, if they do apply they are requir
 
 ## Adrian's Capstone Slides
 - [Instructor Notes on Capstone Project Grading](https://docs.google.com/presentation/d/1U3dFDQYXZbI9YTnC9T--hYtSIDobhbTU6F3lUBnSkjc/edit#slide=id.p)
+
+----------------
+
+[Back to top ⤴](https://github.com/whitnessme/capstone-minimum-required-error-messages#capstone-required-error-messages)
