@@ -46,7 +46,7 @@ Some of these don’t apply to every situation, if they do apply they are requir
 
 **Date/Time Range Errors:**
 
-- [ ]  Start time can’t be after end time
+- [ ]  Start time can’t be after end time*
 - [ ] Are overlapping dates valid from user to user?
 - [ ] Are overlapping dates valid for a single user?
 
