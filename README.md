@@ -88,6 +88,7 @@ Some of these don’t apply to every situation, if they do apply, they are requi
 
 ## Closing Reminders:
 - Remember that CREATE and UPDATE validations need to be identical. 
-- Remember to change the default message format--especially if your column names are coming through, this appears buggy. *Example: "first_name: This field is required"* 
+- Remember to change the default message format--especially if your column names are coming through with underscores, this appears buggy. *Example: "first_name: This field is required"* 
+- Even with optional input fields, there should be at least one or more validations for every input and it is obvious it is optional. (Very rare cases when there are none. Please reach out to us to get approval.)
 
 [Back to top ⤴](https://github.com/whitnessme/capstone-minimum-required-error-messages#capstone-required-error-messages)
