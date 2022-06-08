@@ -8,10 +8,13 @@
 
 Below we have [common input fields](https://github.com/whitnessme/capstone-minimum-required-error-messages#common-input-fields), [different datatypes](https://github.com/whitnessme/capstone-minimum-required-error-messages#different-datatypes) -- with questions relating to each that represent a validation you will possibly need--and [CSS Checks](https://github.com/whitnessme/capstone-minimum-required-error-messages#css-checks) that you'll need to implement. Keep in mind, there needs to be a *specific* error message that is displayed for the user for *EVERY* single validation. If a user can't submit something and nothing happens, you must tell them **why**!
 
-**DISCLAIMER:** This isn't a comprehensive list, please consider any other error messages for your specific forms/database needs! 
+**DISCLAIMER:** This isn't a comprehensive list, please consider any other error messages for your specific forms/database needs!
+*(example: it can't have the default "This field is required", it needs to be a clear specific sentence.)*
 Some of these don’t apply to every situation, if they do apply, they are required, but those marked with an asterisk (*) are *always* required!
 
 *^ which this is a good example of making it obvious what is required!*
+
+![example error message](https://user-images.githubusercontent.com/89945390/160309910-857c3829-c0b3-4721-8e4e-0250bf24b664.png)
 
 ## Common Input Fields:
 
@@ -82,5 +85,9 @@ Some of these don’t apply to every situation, if they do apply, they are requi
 - [Instructor Notes on Capstone Project Grading](https://docs.google.com/presentation/d/1U3dFDQYXZbI9YTnC9T--hYtSIDobhbTU6F3lUBnSkjc/edit#slide=id.p)
 
 ----------------
+
+## Closing Reminders:
+- Remember that CREATE and UPDATE validations need to be identical. 
+- Remember to change the default message format--especially if your column names are coming through, this appears buggy. *Example: "first_name: This field is required"* 
 
 [Back to top ⤴](https://github.com/whitnessme/capstone-minimum-required-error-messages#capstone-required-error-messages)
