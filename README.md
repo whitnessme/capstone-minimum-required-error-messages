@@ -8,7 +8,7 @@
 
 ## How to use this Guide:
 
-Below we have [common input fields](https://github.com/whitnessme/capstone-minimum-required-error-messages#common-input-fields), [different datatypes](https://github.com/whitnessme/capstone-minimum-required-error-messages#different-datatypes) -- with questions relating to each that represent a validation you will possibly need--and [CSS Checks](https://github.com/whitnessme/capstone-minimum-required-error-messages#css-checks) that you'll need to implement. Keep in mind, there needs to be a *specific* error message that is displayed for the user for *EVERY* single validation. If a user can't submit something and nothing happens, you must tell them **why**! A good way to think of these are *edge cases*! 
+Below we have [common input fields](https://github.com/whitnessme/capstone-minimum-required-error-messages#common-input-fields), [different datatypes](https://github.com/whitnessme/capstone-minimum-required-error-messages#different-datatypes) -- with questions relating to each that represent a validation you will possibly need--and [CSS Checks](https://github.com/whitnessme/capstone-minimum-required-error-messages#css-checks) that you'll need to implement. Keep in mind, there needs to be a *specific* error message that is displayed for the user for *EVERY* single validation. If a user can't submit something and nothing happens, you must tell them **why**! A good way to think of these are as *edge cases*! 
 
 **DISCLAIMER:** This isn't a comprehensive list, please consider any other error messages for your specific forms/database needs!
 *(example: it can't have the default "This field is required", it needs to be a clear specific sentence.)*
