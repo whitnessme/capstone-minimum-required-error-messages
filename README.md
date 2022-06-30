@@ -102,5 +102,6 @@ Some of these don’t apply to every situation, if they do apply, they are requi
     - *For the flask starter:* The field name in front of the error message is set in `app/api/auth_routes.py`, in the first function ` validation_errors_to_error_messages`, if you wish to remove it.
 - Even with optional input fields, there should be at least one or more validations for every input and it is obvious it is optional. (Very rare cases when there are none. Please reach out to us to get approval.)
 - This is definitely good for recruiters to not be confused and see good attention to detail when they potentially go through your app.
+- You are responsible for making sure you don't have any bugs on final grading, even if its not caught on pre-grading! Test, test, test! Go through all your user stories and check them off.
 
 [Back to top ⤴](https://github.com/whitnessme/capstone-minimum-required-error-messages#capstone-required-error-messages)
