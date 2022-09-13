@@ -75,6 +75,14 @@ Some of these don’t apply to every situation, if they do apply, they are requi
     - [ ] Is a blank entry valid?
     - [ ] Check the end of the url for valid image file types (.jpg, .png, .gif…etc)*
     - [ ] Don’t need to check if it is a valid link before submitting, but have a plan to handle broken images.*
+        - This can be done by using the onError property (Go to MDN and look at the "Image loading errors" section of the <img> element page to better understand what is going on.)
+        ```
+          <img 
+	          src={original.image} 
+               alt=""
+               onError={e => { e.currentTarget.src = "your_image_not_found_defalt_picture_here"; }}
+          />
+        ```
 - **External API (applies to Videos & Audio, too)**
     - [ ] Is it a valid file type? (needs to tell them specifically what extensions are valid)*
     - [ ] Is the size of the file too large? (not required but highly recommended!)
