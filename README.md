@@ -74,8 +74,8 @@ Some of these don’t apply to every situation, if they do apply, they are requi
 -  **URL (Images only)**
     - [ ] Is a blank entry valid?
     - [ ] Check the end of the url for valid image file types (.jpg, .png, .gif…etc)*
-    - [ ] Don’t need to check if it is a valid link before submitting, but have a plan to handle broken images.*
-        - This can be done by using the onError property (Go to MDN and look at the "Image loading errors" section of the <img> element page to better understand what is going on.)
+    - [ ] You don’t need to check if it is a valid link before submitting, but have a plan to handle broken images.*
+        - For example: this can be done by using the `onError` property (Go to MDN and look at the ["Image loading errors" section of the <img> element page](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#image_loading_errors) to better understand what is going on.)
         ```
           <img 
 	          src={original.image} 
