@@ -26,7 +26,9 @@ Some of these don’t apply to every situation, if they do apply, they are requi
 
 - **Required Data**
      - [ ] Is the input data valid/useful?*
-     	- Prevent users to submit white-space only inputs since those would not be useful data that your app could use. 
+     	- Prevent users to submit white-space only inputs since those would not be useful data that your app could use.
+     		- One way to accomplish this is by trimming the input data and checking if the length is 0.
+     		- Another approach is by disabling the submit button if any required data fields have invalid input.
 - **Email**
      - [ ] Is it a valid email?*
 -  **Password**
