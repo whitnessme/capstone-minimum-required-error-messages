@@ -24,6 +24,9 @@ Some of these don’t apply to every situation, if they do apply, they are requi
 
 ## Common Input Fields:
 
+- **Required Data**
+     - [ ] Is the input data valid/useful?*
+     	- Prevent users to submit white-space only inputs since those would not be useful data that your app could use. 
 - **Email**
      - [ ] Is it a valid email?*
 -  **Password**
