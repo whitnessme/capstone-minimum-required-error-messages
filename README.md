@@ -8,8 +8,9 @@
 - [How to use this Guide](https://github.com/whitnessme/capstone-minimum-required-error-messages#how-to-use-this-guide)
 - [Different Datatypes](https://github.com/whitnessme/capstone-minimum-required-error-messages#1-different-datatypes)
     - String, Integer/Num, Date/Time, & Date/Time Ranges
-- [Special File Data](https://github.com/whitnessme/capstone-minimum-required-error-messages#2-special-file-data)
-    - Image, Audio, Video
+- [URL File Data](https://github.com/whitnessme/capstone-minimum-required-error-messages#2-url-file-data)
+    - Image URL
+    - External API for Image, Audio, Video
 - [Common Input Fields](https://github.com/whitnessme/capstone-minimum-required-error-messages#3-common-input-fields)
 - [CSS Checks](https://github.com/whitnessme/capstone-minimum-required-error-messages#4-css-checks)
 - [More Important Information](https://github.com/whitnessme/capstone-minimum-required-error-messages#5-more-important-information)
@@ -21,7 +22,7 @@
 ------------
 ## How to use this Guide:
 
-Below we have [Different Datatypes](https://github.com/whitnessme/capstone-minimum-required-error-messages#1-different-datatypes), [Common Input Fields](https://github.com/whitnessme/capstone-minimum-required-error-messages#2-common-input-fields), [Special File Data](https://github.com/whitnessme/capstone-minimum-required-error-messages#2-special-file-data) with questions relating to each that represent a validation you will possibly need. **If the answer to the question is "YES" or the line has an asterisk (*) then you need a validation & error message for that point!**
+Below we have [Different Datatypes](https://github.com/whitnessme/capstone-minimum-required-error-messages#1-different-datatypes), [Common Input Fields](https://github.com/whitnessme/capstone-minimum-required-error-messages#2-common-input-fields), [URL File Data](https://github.com/whitnessme/capstone-minimum-required-error-messages#2-url-file-data) with questions relating to each that represent a validation you will possibly need. **If the answer to the question is "YES" or the line has an asterisk (*) then you need a validation & error message for that point!**
 Keep in mind, there needs to be a *specific* error message that is displayed for the user for *EVERY* single validation.
 #### If a user can't submit something and nothing happens, you must tell them **why**! A good way to think of these are as *edge cases*! 
 After those, we have [CSS Checks](https://github.com/whitnessme/capstone-minimum-required-error-messages#3-css-checks) for things you'll need to implement to make sure user inputted data displays properly.
@@ -74,9 +75,9 @@ Some of these don’t apply to every situation. If they do apply, *they are requ
 - [ ] Are overlapping dates/time ranges not valid if the user themselves already inputted elsewhere?
 
 -------------------
-## 2. Special File Data
+## 2. URL File Data
 
-**Image Errors for user inputting a URL**
+**Image Errors for User-inputted URL**
 - [ ] Is data required?
 - [ ] Check the end of the url for valid image file types* (with error message telling what valid types are: .jpg, .png, .gif, etc...)
 - [ ] You don’t need to check if it is a valid image/link before the user submits, but have a plan to handle broken images.*
@@ -89,7 +90,7 @@ Some of these don’t apply to every situation. If they do apply, *they are requ
 />
 ```
 	
-**Image/Video/Audio External API usage (like AWS)**
+**Image/Video/Audio External API Errors (like AWS)**
 - [ ] Is it not a valid file type?* (error message needs to tell specifically what extensions are valid)
     - Do not make the mistake of thinking limiting what type of file the "Browse..." button will open will allow you to not have this validation, users can still drag files onto that field. To test this, drag a .txt or some other file type onto the "Browse..." input field.
 
