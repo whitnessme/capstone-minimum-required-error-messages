@@ -42,8 +42,6 @@ Some of these don’t apply to every situation. If they do apply, *they are requ
 **String Errors:**
 
 - [ ]  Is data required?
-    - [ ] If yes, you need to **prevent users from submiting only white-space** (like spaces)*.
-        - This is easily handled by [trimming](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/trim) the input data and checking if the length is 0.
 - [ ]  Does the value excede the max length?* (There should be always be a max length set with the error message or instructions telling the specific range/limit)
 - [ ]  Is there a minimum length?
 - [ ] Are unique entries required?
@@ -62,33 +60,34 @@ Some of these don’t apply to every situation. If they do apply, *they are requ
 - [ ] Is data required?
 - [ ] Is today not a valid entry?
 - [ ] Are past dates/times not valid?
-- [ ] Is the same date/time not valid if another user already inputted/"claimed" it?
+- [ ] Is the same date/time not valid if another user already reserved it?
     - *Example:* a user can't get an appointment with a realtor if another user already booked with them at that time. 
-- [ ] Is the same date/time not valid if the user themselves already inputted elsewhere?
+- [ ] Is the same date/time not valid if the user themselves already reserved elsewhere?
     - *Example:* a user can't get a second appointment with a realtor if they already have an appoitment with someone else at the same time. 
 
 **Date/Time Range Errors:**
 
 - [ ] Is the start time after the end time?*
-- [ ] Are overlapping dates/time ranges not valid if another user already inputted/"claimed" them?
+- [ ] Are overlapping dates/time ranges not valid if another user already reserved them?
     - *Example:* Users can't book the same Airbnb when someone else has those days booked.
-- [ ] Are overlapping dates/time ranges not valid if the user themselves already inputted elsewhere?
+- [ ] Are overlapping dates/time ranges not valid if the user themselves already reserved elsewhere?
 
 -------------------
 ## 2. URL File Data
 
 **Image Errors for User-inputted URL**
 - [ ] Is data required?
+- [ ] Check the beginning of the url for "http://" or "https://"* (with error message telling them it's needed)
 - [ ] Check the end of the url for valid image file types* (with error message telling what valid types are: .jpg, .png, .gif, etc...)
 - [ ] You don’t need to check if it is a valid image/link before the user submits, but have a plan to handle broken images.*
     - This can be done by using the `onError` property (Go to MDN and look at the ["Image loading errors" section of the <img> element page](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#image_loading_errors) to better understand what is going on.)
-```
-<img 
-    src={original.image} 
-    alt="image description for screen readers"
-    onError={e => { e.currentTarget.src = "your_image_not_found_defalt_picture_here"; }}
-/>
-```
+    ```
+    <img 
+        src={original.image} 
+        alt="image description for screen readers"
+        onError={e => { e.currentTarget.src = "your_image_not_found_defalt_picture_here"; }}
+   />
+   ```
 	
 **Image/Video/Audio External API Errors (like AWS)**
 - [ ] Is it not a valid file type?* (error message needs to tell specifically what extensions are valid)
@@ -148,5 +147,10 @@ Some of these don’t apply to every situation. If they do apply, *they are requ
 ### Accessibility:
 - Conveying meaning with color alone is *not* intuitive, especially for those with disabilites. Please check out this section of the W3 article [Designing for Web Accessibility](https://www.w3.org/WAI/tips/designing/#dont-use-color-alone-to-convey-information) to see more information on this! Especially important for letting users know what is required.
 ![w3 conveying meaning with color](https://user-images.githubusercontent.com/89945390/172491261-e2cdac57-aef4-49f1-9c9b-5bc37e641b5a.png)
+
+### Extra Validations not required for passing
+- [ ] Prevent users from submiting only white-space** *(example: `"           "`)* *.
+        - This is easily handled by [trimming](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/trim) the input data and checking if the length is 0.
+- [ ] Prevent users from uploading large files to your AWS bucket. 
 
 [Back to top ⤴](https://github.com/whitnessme/capstone-minimum-required-error-messages#capstone-required-error-messages)
