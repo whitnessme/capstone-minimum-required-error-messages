@@ -8,13 +8,10 @@
 
 ## How to use this Guide:
 
-Below we have [common input fields](https://github.com/whitnessme/capstone-minimum-required-error-messages#common-input-fields), [different datatypes](https://github.com/whitnessme/capstone-minimum-required-error-messages#different-datatypes) -- with questions relating to each that represent a validation you will possibly need--and [CSS Checks](https://github.com/whitnessme/capstone-minimum-required-error-messages#css-checks) that you'll need to implement. Keep in mind, there needs to be a *specific* error message that is displayed for the user for *EVERY* single validation. If a user can't submit something and nothing happens, you must tell them **why**! A good way to think of these are as *edge cases*! 
+Below we have [Different Datatypes](https://github.com/whitnessme/capstone-minimum-required-error-messages#different-datatypes), [Common Input Fields](https://github.com/whitnessme/capstone-minimum-required-error-messages#common-input-fields) -- with questions relating to each that represent a validation you will possibly need--and [CSS Checks](https://github.com/whitnessme/capstone-minimum-required-error-messages#css-checks) that you'll need to implement. Keep in mind, there needs to be a *specific* error message that is displayed for the user for *EVERY* single validation. If a user can't submit something and nothing happens, you must tell them **why**! A good way to think of these are as *edge cases*! 
 
 **DISCLAIMER:** This isn't a comprehensive list, please consider any other error messages for your specific forms/database needs!
-*(example: it can't have the default "This field is required", it needs to be a clear specific sentence.)*
 Some of these don’t apply to every situation, if they do apply, they are required, but those marked with an asterisk (*) are *always* required!
-
-*^ which this is a good example of making it obvious what is required!*
 
 > Example Error Messages:
 
@@ -22,41 +19,20 @@ Some of these don’t apply to every situation, if they do apply, they are requi
 
 -----------------------
 
-## Common Input Fields:
-
-- **Required Data**
-     - [ ] Is the input data valid/useful?*
-     	- Prevent users to submit white-space only inputs since those would not be useful data that your app could use.
-     		- One way to accomplish this is by trimming the input data and checking if the length is 0.
-     		- Another approach is by disabling the submit button if any required data fields have invalid input.
-- **Email**
-     - [ ] Is it a valid email?*
--  **Password**
-    - [ ] Is it matching the confirm password field?*
--  **Address**
-    - *If it’s only for display purposes, there doesn’t need to be separated fields*    
-    -  *If in separate fields:*
-        - [ ] U.S. Zip code – 5 integers*
-     - [ ] If an external API is dependent on it, there might be more validations needed for each field.
--  **Cell/Phone Numbers**
-    - [ ]  Length of 10 integers* (for the U.S)
-- **Money**
-    - [ ] Is the value negative?*
-    - [ ] Is the value only 2 decimal points over? (float, `step="0.01"`)
- 
-----------
-
 ## Different Datatypes:
 
 **String Errors:**
 
-- [ ]  Is a blank entry valid? (and you can tell exactly which field its referring to)
+- [ ]  Is data required?*
+    - [ ] If yes, you need to **prevent users from submiting only white-space** (like spaces)*.
+        - This is easily handled by [trimming](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/trim) the input data and checking if the length is 0.
 - [ ]  Max length (error telling specifically the range/limit)*
 - [ ]  Min length (when appropriate)
 
 **Integer/Number Errors:**
 
-- [ ] Is zero/blank a valid entry?
+- [ ] Is zero valid?
+- [ ] Is data required?*?
 - [ ] Does the value only contain numbers?
 - [ ] Are negative numbers valid?
 - [ ] Min # (when appropriate)
@@ -80,7 +56,7 @@ Some of these don’t apply to every situation, if they do apply, they are requi
     - [ ] Is a blank entry valid?
     - [ ] Check the end of the url for valid image file types (.jpg, .png, .gif…etc)*
     - [ ] You don’t need to check if it is a valid link before submitting, but have a plan to handle broken images.*
-        - For example: this can be done by using the `onError` property (Go to MDN and look at the ["Image loading errors" section of the <img> element page](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#image_loading_errors) to better understand what is going on.)
+        - This can be done by using the `onError` property (Go to MDN and look at the ["Image loading errors" section of the <img> element page](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#image_loading_errors) to better understand what is going on.)
         ```
           <img 
 	          src={original.image} 
@@ -92,6 +68,30 @@ Some of these don’t apply to every situation, if they do apply, they are requi
     - [ ] Is it a valid file type? (needs to tell them specifically what extensions are valid)*
     - [ ] Is the size of the file too large? (not required but highly recommended!)
 
+----------
+
+## Common Input Fields:
+
+- **Required Data**
+     - [ ] Is the input data valid/useful?*
+     	- Prevent users to submit white-space only inputs since those would not be useful data that your app could use.
+     		- One way to accomplish this is by trimming the input data and checking if the length is 0.
+     		- Another approach is by disabling the submit button if any required data fields have invalid input.
+- **Email**
+     - [ ] Is it a valid email?*
+-  **Password**
+    - [ ] Is it matching the confirm password field?*
+-  **Address**
+    - *If it’s only for display purposes, there doesn’t need to be separated fields*    
+    -  *If in separate fields:*
+        - [ ] U.S. Zip code – 5 integers*
+     - [ ] If an external API is dependent on it, there might be more validations needed for each field.
+-  **Cell/Phone Numbers**
+    - [ ]  Length of 10 integers* (for the U.S)
+- **Money**
+    - [ ] Is the value negative?*
+    - [ ] Is the value only 2 decimal points over? (float, `step="0.01"`)
+ 
 ----------
 
 ## CSS Checks
