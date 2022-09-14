@@ -77,21 +77,21 @@ Some of these don’t apply to every situation. If they do apply, *they are requ
 ## 2. Special File Data
 
 **Image Errors for user inputting a URL**
-    - [ ] Is data required?
-    - [ ] Check the end of the url for valid image file types* (with error message telling what valid types are: .jpg, .png, .gif, etc...)
-    - [ ] You don’t need to check if it is a valid image/link before the user submits, but have a plan to handle broken images.*
-        - This can be done by using the `onError` property (Go to MDN and look at the ["Image loading errors" section of the <img> element page](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#image_loading_errors) to better understand what is going on.)
-        ```
-          <img 
-	          src={original.image} 
-               alt=""
-               onError={e => { e.currentTarget.src = "your_image_not_found_defalt_picture_here"; }}
-          />
-        ```
+- [ ] Is data required?
+- [ ] Check the end of the url for valid image file types* (with error message telling what valid types are: .jpg, .png, .gif, etc...)
+- [ ] You don’t need to check if it is a valid image/link before the user submits, but have a plan to handle broken images.*
+    - This can be done by using the `onError` property (Go to MDN and look at the ["Image loading errors" section of the <img> element page](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#image_loading_errors) to better understand what is going on.)
+```
+<img 
+    src={original.image} 
+    alt="image description for screen readers"
+    onError={e => { e.currentTarget.src = "your_image_not_found_defalt_picture_here"; }}
+/>
+```
 	
 **Image/Video/Audio External API usage (like AWS)**
-    - [ ] Is it not a valid file type?* (error message needs to tell specifically what extensions are valid)
-        - Do not make the mistake of thinking limiting what type of file the "Browse..." button will open will allow you to not have this validation, users can still drag files onto that field. To test this, drag a .txt or some other file type onto the "Browse..." input field.
+- [ ] Is it not a valid file type?* (error message needs to tell specifically what extensions are valid)
+    - Do not make the mistake of thinking limiting what type of file the "Browse..." button will open will allow you to not have this validation, users can still drag files onto that field. To test this, drag a .txt or some other file type onto the "Browse..." input field.
 
 ----------
 
