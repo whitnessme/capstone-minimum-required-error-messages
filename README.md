@@ -18,6 +18,7 @@
     - [Capstone Grading Slides](https://github.com/whitnessme/capstone-minimum-required-error-messages#capstone-grading-slides)
 - [Bonus Information](https://github.com/whitnessme/capstone-minimum-required-error-messages#6-bonus-information)
     - [Accessibility](https://github.com/whitnessme/capstone-minimum-required-error-messages#accessibility)
+    - [Extra Validations not required for passing](https://github.com/whitnessme/capstone-minimum-required-error-messages#extra-validations-not-required-for-passing)
 
 ------------
 ## How to use this Guide:
