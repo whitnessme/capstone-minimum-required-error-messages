@@ -144,7 +144,7 @@ Some of these don’t apply to every situation. If they do apply, *they are requ
 
 -------------------
 
-## 5. Bonus Information
+## 6. Bonus Information
 ### Accessibility:
 - Conveying meaning with color alone is *not* intuitive, especially for those with disabilites. Please check out this section of the W3 article [Designing for Web Accessibility](https://www.w3.org/WAI/tips/designing/#dont-use-color-alone-to-convey-information) to see more information on this! Especially important for letting users know what is required.
 ![w3 conveying meaning with color](https://user-images.githubusercontent.com/89945390/172491261-e2cdac57-aef4-49f1-9c9b-5bc37e641b5a.png)
