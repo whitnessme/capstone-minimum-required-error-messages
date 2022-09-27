@@ -137,11 +137,6 @@ Some of these don’t apply to every situation. If they do apply, *they are requ
 - Even if data isn't required on an input field, there should be at least one validation for every input. (Very rare cases when there are none. Please reach out to us to get approval.)
 - Error handling and letting users know what to do make your apps actually usable & navigatable. **You are responsible for making sure you don't have any bugs on final grading, even if its not caught on pre-grading!** Go through all your user stories and check them off.
 
-
-### Capstone Grading Slides
-> Please check out this file for more in depth information.
-- [Instructor Notes on Capstone Project Grading](https://docs.google.com/presentation/d/1U3dFDQYXZbI9YTnC9T--hYtSIDobhbTU6F3lUBnSkjc/edit#slide=id.p)
-
 -------------------
 
 ## 6. Bonus Information
