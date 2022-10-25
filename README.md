@@ -114,10 +114,25 @@ Some of these don’t apply to every situation. If they do apply, *they are requ
 - **Money**
     - [ ] Is the value negative?*
     - [ ] Is the value only 2 decimal points over? (float, `step="0.01"`)
+
+----------------
+
+## 4. Data Persistence:
+### Think of the User Experience:
+- CREATE and EDIT forms should have User inputs persisting if the form failed to submit.
+    - If a constraint is not met for a field in a form, it would be inconvenient if all other inputs are lost/reset.
+    	- An example would be a user losing all the inputs made for a Review body after pressing submit, if a required Star Rating was forgotten.
+    - Multi-step/page forms should have the data on their fields persist even after switching to a different step/page on the form.
+        - Consider the most likely case that a User needs to go back and change an input field from a previous step.
+- EDIT forms should pre-populate the form fields with what is currently saved on the Database for that entry. 
+    - A common example where this is essential is when a User decides to fix a typo from a previously submitted Posts.
+### Consider Data Security as well (Soft Requirement but ideal):
+- Avoid persisting sensitive data such as passwords, credit card info, etc...
+    - Consider either hiding or encrypting the data for such fields.
  
 ----------
 
-## 4. CSS Checks
+## 5. CSS Checks
 > From what users could enter -- the READ of CRUD. [Not planning for these can result in some buggy looking apps!](https://docs.google.com/presentation/d/1U3dFDQYXZbI9YTnC9T--hYtSIDobhbTU6F3lUBnSkjc/edit#slide=id.g11627660d89_0_20)
 
 - [ ] Long string (no spaces) | Word-break & overflow*
@@ -129,7 +144,7 @@ Some of these don’t apply to every situation. If they do apply, *they are requ
 
 ----------------
 
-## 5. More Important Information
+## 6. More Important Information
 ### Keep in Mind:
 - CREATE and UPDATE validations need to be identical. 
 - Change the default message format--especially if your column names are coming through with underscores, this appears buggy. *Example: "first_name: This field is required"* 
@@ -139,7 +154,7 @@ Some of these don’t apply to every situation. If they do apply, *they are requ
 
 -------------------
 
-## 6. Bonus Information
+## 7. Bonus Information
 ### Accessibility:
 - Conveying meaning with color alone is *not* intuitive, especially for those with disabilites. Please check out this section of the W3 article [Designing for Web Accessibility](https://www.w3.org/WAI/tips/designing/#dont-use-color-alone-to-convey-information) to see more information on this! Especially important for letting users know what is required.
 ![w3 conveying meaning with color](https://user-images.githubusercontent.com/89945390/172491261-e2cdac57-aef4-49f1-9c9b-5bc37e641b5a.png)
